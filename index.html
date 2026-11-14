@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Halex System&reg | 10 Sites Incríveis Sem Mensalidade</title>
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Configuração Tailwind Customizada -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              blue: '#2563eb',
+              indigo: '#4f46e5',
+              purple: '#7c3aed',
+              mint: '#10b981',
+              amber: '#f59e0b',
+              rose: '#f43f5e'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos Complementares (Suaves e Claros) -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: #f8fafc;
+      color: #1e293b;
+      overflow-x: hidden;
+    }
+    .hero-mesh {
+      background-color: #f0f9ff;
+      background-image: 
+        radial-gradient(at 10% 15%, rgba(56, 189, 248, 0.22) 0px, transparent 50%),
+        radial-gradient(at 85% 10%, rgba(167, 139, 250, 0.25) 0px, transparent 50%),
+        radial-gradient(at 50% 90%, rgba(52, 211, 153, 0.20) 0px, transparent 55%);
+    }
+    .glass-header {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+    }
+    .card-hover {
+      transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.08), 0 8px 10px -6px rgba(124, 58, 237, 0.06);
+    }
+    /* Custom Checkbox para Calculadora */
+    .calc-checkbox:checked + .calc-label {
+      border-color: #4f46e5;
+      background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 100%);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.12);
+    }
+    .calc-checkbox:checked + .calc-label .check-circle {
+      background-color: #4f46e5;
+      border-color: #4f46e5;
+      color: white;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-indigo-100 selection:text-indigo-800">
+
+  <!-- 1. HEADER / NAVBAR FIXO -->
+  <header class="fixed top-0 left-0 right-0 z-40 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-18 flex items-center justify-between gap-2">
+      <!-- Logo / Título -->
+      <a href="#topo" class="flex items-center gap-2.5 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-layer-group text-lg"></i>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-extrabold text-base sm:text-lg tracking-tight text-slate-900 leading-none">
+            Sites <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Gratuito</span>
+          </span>
+          <span class="text-[11px] font-medium text-slate-500 mt-0.5 hidden sm:block">Halex System&reg</span>
+        </div>
+      </a>
+
+      <!-- Navegação Desktop -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+        <a href="#sites" class="hover:text-blue-600 transition-colors py-2">Os 10 Sites</a>
+        <a href="#pastas" class="hover:text-purple-600 transition-colors py-2">Guia de Pastas</a>
+        <a href="#economia" class="hover:text-emerald-600 transition-colors py-2">Simulador de Economia</a>
+      </nav>
+
+      <!-- Botão YouTube + Menu Mobile 
+      <div class="flex items-center gap-2">
+        <a href="https://youtu.be/VSIrpA2efAc" target="_blank" rel="noopener noreferrer" 
+           class="inline-flex items-center gap-2 bg-rose-50 hover:bg-rose-600 text-rose-600 hover:text-white border border-rose-200 hover:border-rose-600 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all shadow-sm">
+          <i class="fa-brands fa-youtube text-base"></i>
+          <span class="hidden sm:inline">Assistir no YouTube</span>
+          <span class="sm:hidden">Vídeo</span>
+        </a>
+        
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Abrir menu" class="md:hidden p-2.5 rounded-xl text-slate-600 hover:bg-slate-100 transition-colors">
+          <i class="fa-solid fa-bars text-lg"></i>
+        </button>-->
+      </div>
+    </div>
+
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-1 shadow-lg">
+      <a href="#sites" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-blue-50 hover:text-blue-600">
+        <i class="fa-solid fa-globe w-5 text-blue-500"></i> Os 10 Sites
+      </a>
+      <a href="#pastas" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-purple-50 hover:text-purple-600">
+        <i class="fa-solid fa-folder-tree w-5 text-purple-500"></i> Guia de Pastas
+      </a>
+      <a href="#economia" onclick="toggleMobileMenu()" class="block px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:bg-emerald-50 hover:text-emerald-600">
+        <i class="fa-solid fa-calculator w-5 text-emerald-500"></i> Simulador de Economia
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section id="topo" class="hero-mesh pt-28 pb-16 sm:pt-36 sm:pb-24 border-b border-slate-200/70">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      
+      <!-- Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 border border-indigo-200 shadow-sm mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+        <span class="text-xs font-extrabold uppercase tracking-wider text-indigo-700">
+          Sites Gratuitos • Guia Interativo
+        </span>
+      </div>
+
+      <!-- Título Chamativo -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight max-w-4xl mx-auto leading-[1.15]">
+        10 Sites Pouco Conhecidos que Substituem 
+        <span class="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-500 bg-clip-text text-transparent">
+          Assinaturas Caras
+        </span>
+      </h1>
+
+      <!-- Subtítulo Explicativo -->
+      <p class="mt-5 text-base sm:text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed font-normal">
+        Descubra ferramentas gratuitas de nível profissional para espionar fornecedores, editar arquivos sem mensalidade e blindar sua privacidade na internet — sem pagar um centavo.
+      </p>
+
+      <!-- Botões de Ação -->
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
+        <a href="#sites" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold px-7 py-3.5 rounded-2xl shadow-lg shadow-blue-600/25 transition-all hover:scale-[1.02]">
+          <i class="fa-solid fa-compass"></i>
+          Explorar os 10 Sites
+        </a>
+        <a href="#economia" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white hover:bg-emerald-50 text-slate-800 hover:text-emerald-700 font-bold px-7 py-3.5 rounded-2xl border border-slate-200 hover:border-emerald-300 shadow-sm transition-all">
+          <i class="fa-solid fa-piggy-bank text-emerald-500"></i>
+          Calcular Minha Economia
+        </a>
+      </div>
+
+      <!-- Métricas / Destaques Rápidos -->
+      <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        <div class="bg-white/80 backdrop-blur-sm border border-blue-100 rounded-2xl p-4 flex items-center justify-center gap-3 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+          </div>
+          <div class="text-left">
+            <div class="text-sm font-extrabold text-slate-800">3 Ferramentas</div>
+            <div class="text-xs text-slate-500">Mercado & Concorrência</div>
+          </div>
+        </div>
+
+        <div class="bg-white/80 backdrop-blur-sm border border-purple-100 rounded-2xl p-4 flex items-center justify-center gap-3 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <div class="text-left">
+            <div class="text-sm font-extrabold text-slate-800">4 Ferramentas</div>
+            <div class="text-xs text-slate-500">Produção Sem Mensalidade</div>
+          </div>
+        </div>
+
+        <div class="bg-white/80 backdrop-blur-sm border border-emerald-100 rounded-2xl p-4 flex items-center justify-center gap-3 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <div class="text-left">
+            <div class="text-sm font-extrabold text-slate-800">3 Ferramentas</div>
+            <div class="text-xs text-slate-500">Blindagem & Privacidade</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 & 4. FILTROS INTERATIVOS + GRADE DOS 10 CARDS -->
+  <section id="sites" class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Cabeçalho da Seção -->
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-blue-600 bg-blue-100/80 px-3 py-1 rounded-full">
+          Catálogo Completo do Vídeo
+        </span>
+        <h2 class="mt-3 text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          As 10 Ferramentas Que Parecem Boas Demais Para Serem Gratuitas
+        </h2>
+        <p class="mt-3 text-slate-600 text-sm sm:text-base">
+          Pesquise por funcionalidade, filtre por categoria ou copie qualquer endereço com um clique.
+        </p>
+      </div>
+
+      <!-- Barra de Busca e Filtros -->
+      <div class="bg-white p-4 sm:p-5 rounded-3xl border border-slate-200/90 shadow-sm mb-10 space-y-4">
+        <div class="flex flex-col lg:flex-row gap-4 items-stretch lg:items-center justify-between">
+          
+          <!-- Campo de Busca em Tempo Real -->
+          <div class="relative flex-1">
+            <i class="fa-solid fa-search absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+            <input 
+              type="text" 
+              id="searchInput" 
+              oninput="filterSites()" 
+              placeholder="Buscar por nome ou função (ex: PDF, Photoshop, fornecedor, e-mail, Wi-Fi)..." 
+              class="w-full pl-11 pr-10 py-3 bg-slate-50 hover:bg-slate-100/70 focus:bg-white border border-slate-200 focus:border-blue-500 rounded-2xl text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all"
+            >
+            <button id="clearSearchBtn" onclick="clearSearch()" title="Limpar busca" class="hidden absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </button>
+          </div>
+
+          <!-- Botões de Filtro por Categoria -->
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filtros por categoria">
+            <button onclick="setCategoryFilter('all')" data-cat="all" class="filter-btn active px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-slate-900 text-white shadow-sm">
+              Todos (10)
+            </button>
+            <button onclick="setCategoryFilter('mercado')" data-cat="mercado" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200/70">
+              <i class="fa-solid fa-chart-line mr-1"></i> Mercado & Concorrência
+            </button>
+            <button onclick="setCategoryFilter('producao')" data-cat="producao" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-purple-50 text-purple-700 hover:bg-purple-100 border border-purple-200/70">
+              <i class="fa-solid fa-bolt mr-1"></i> Produção Sem Mensalidade
+            </button>
+            <button onclick="setCategoryFilter('privacidade')" data-cat="privacidade" class="filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border border-emerald-200/70">
+              <i class="fa-solid fa-user-shield mr-1"></i> Blindagem & Privacidade
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Grade Dinâmica dos Cards -->
+      <div id="sitesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Renderizado via JavaScript -->
+      </div>
+
+      <!-- Estado Vazio (caso a busca não retorne nada) -->
+      <div id="emptyState" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200">
+        <div class="w-16 h-16 mx-auto bg-slate-100 text-slate-400 rounded-2xl flex items-center justify-center text-2xl mb-4">
+          <i class="fa-solid fa-filter-circle-xmark"></i>
+        </div>
+        <h3 class="text-lg font-bold text-slate-800">Nenhuma ferramenta encontrada</h3>
+        <p class="text-sm text-slate-500 mt-1">Tente buscar por outro termo ou limpe os filtros ativos.</p>
+        <button onclick="resetFilters()" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-5 py-2.5 rounded-xl transition-colors">
+          Mostrar todos os 10 sites
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. MÉTODO DAS 3 PASTAS NOS FAVORITOS -->
+  <section id="pastas" class="py-16 sm:py-24 bg-gradient-to-br from-indigo-50/70 via-white to-emerald-50/70 border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div class="max-w-2xl">
+          <span class="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-purple-700 bg-purple-100 px-3 py-1 rounded-full">
+            <i class="fa-solid fa-bookmark"></i> Dica de Ouro do Final do Vídeo
+          </span>
+          <h2 class="mt-3 text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            Método das 3 Pastas nos Favoritos
+          </h2>
+          <p class="mt-3 text-slate-600 text-sm sm:text-base">
+            Não deixe esses sites perdidos no histórico. Crie três pastas na barra de favoritos do seu navegador e salve cada ferramenta no lugar certo para acesso imediato.
+          </p>
+        </div>
+
+        <button onclick="copyAllFolders()" class="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-bold px-5 py-3.5 rounded-2xl shadow-md shadow-purple-600/20 transition-all hover:scale-[1.02] text-sm shrink-0">
+          <i class="fa-regular fa-copy"></i>
+          Copiar Lista Organizada
+        </button>
+      </div>
+
+      <!-- 3 Pastas Visuais -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Pasta 1 -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-blue-100 shadow-sm hover:border-blue-300 transition-all">
+          <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-100">
+            <div class="w-12 h-12 rounded-2xl bg-blue-100 text-blue-600 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-blue-600">Pasta 01</span>
+              <h3 class="font-extrabold text-lg text-slate-900">Mercado e Concorrência</h3>
+            </div>
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-center justify-between p-3 rounded-xl bg-blue-50/60 hover:bg-blue-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">1. ImportYeti</span>
+                <span class="text-xs text-slate-500">Fornecedores e embarques EUA</span>
+              </div>
+              <a href="https://www.importyeti.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li class="flex items-center justify-between p-3 rounded-xl bg-blue-50/60 hover:bg-blue-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">5. BuiltWith</span>
+                <span class="text-xs text-slate-500">Tecnologias por trás de sites</span>
+              </div>
+              <a href="https://builtwith.com" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li class="flex items-center justify-between p-3 rounded-xl bg-blue-50/60 hover:bg-blue-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">6. Wayback Machine</span>
+                <span class="text-xs text-slate-500">Histórico da web desde 1996</span>
+              </div>
+              <a href="https://web.archive.org" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pasta 2 -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-purple-100 shadow-sm hover:border-purple-300 transition-all">
+          <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-100">
+            <div class="w-12 h-12 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-purple-600">Pasta 02</span>
+              <h3 class="font-extrabold text-lg text-slate-900">Produção Sem Mensalidade</h3>
+            </div>
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-center justify-between p-3 rounded-xl bg-purple-50/60 hover:bg-purple-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">2. Photopea</span>
+                <span class="text-xs text-slate-500">Editor PSD e imagens no navegador</span>
+              </div>
+              <a href="https://www.photopea.com" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li class="flex items-center justify-between p-3 rounded-xl bg-purple-50/60 hover:bg-purple-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">3. PDF24 Tools</span>
+                <span class="text-xs text-slate-500">+30 ferramentas ilimitadas de PDF</span>
+              </div>
+              <a href="https://tools.pdf24.org" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li class="flex items-center justify-between p-3 rounded-xl bg-purple-50/60 hover:bg-purple-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">4. AlternativeTo</span>
+                <span class="text-xs text-slate-500">Substitutos gratuitos de softwares</span>
+              </div>
+              <a href="https://alternativeto.net" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li class="flex items-center justify-between p-3 rounded-xl bg-purple-50/60 hover:bg-purple-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">10. LocalSend</span>
+                <span class="text-xs text-slate-500">AirDrop universal via Wi-Fi local</span>
+              </div>
+              <a href="https://localsend.org" target="_blank" rel="noopener noreferrer" class="text-purple-600 hover:text-purple-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pasta 3 -->
+        <div class="bg-white rounded-3xl p-6 border-2 border-emerald-100 shadow-sm hover:border-emerald-300 transition-all">
+          <div class="flex items-center gap-3 pb-4 mb-4 border-b border-slate-100">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl">
+              <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div>
+              <span class="text-[11px] font-extrabold uppercase tracking-wider text-emerald-600">Pasta 03</span>
+              <h3 class="font-extrabold text-lg text-slate-900">Blindagem e Privacidade</h3>
+            </div>
+          </div>
+          <ul class="space-y-3">
+            <li class="flex items-center justify-between p-3 rounded-xl bg-emerald-50/60 hover:bg-emerald-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">7. ToS;DR</span>
+                <span class="text-xs text-slate-500">Notas de A a E para termos de uso</span>
+              </div>
+              <a href="https://tosdr.org" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li class="flex items-center justify-between p-3 rounded-xl bg-emerald-50/60 hover:bg-emerald-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">8. Just Delete Me</span>
+                <span class="text-xs text-slate-500">Links diretos para apagar contas</span>
+              </div>
+              <a href="https://justdeleteme.xyz" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li class="flex items-center justify-between p-3 rounded-xl bg-emerald-50/60 hover:bg-emerald-50 transition-colors">
+              <div>
+                <span class="font-bold text-sm text-slate-800 block">9. Have I Been Pwned</span>
+                <span class="text-xs text-slate-500">Consulta e alertas de vazamentos</span>
+              </div>
+              <a href="https://haveibeenpwned.com" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:text-emerald-800 p-2" title="Abrir site">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CALCULADORA INTERATIVA DE ECONOMIA ANUAL -->
+  <section id="economia" class="py-16 sm:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
+          Impacto no Seu Bolso
+        </span>
+        <h2 class="mt-3 text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+          Simulador de Economia Anual
+        </h2>
+        <p class="mt-3 text-slate-600 text-sm sm:text-base">
+          Marque abaixo quais assinaturas ou softwares pagos você pode substituir pelas alternativas gratuitas do vídeo e veja quanto dinheiro sobra no fim do ano.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Lista de Assinaturas Substituíveis -->
+        <div class="lg:col-span-7 space-y-3">
+          
+          <!-- Item 1 -->
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="calc-checkbox sr-only" data-price="104" checked onchange="calculateSavings()">
+            <div class="calc-label p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-slate-50/50 hover:border-indigo-300 transition-all flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="check-circle w-6 h-6 rounded-lg border-2 border-slate-300 flex items-center justify-center text-xs transition-colors shrink-0">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 text-sm sm:text-base">Editor de Fotos / Photoshop</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Substituído por <span class="font-bold text-purple-600">Photopea</span> (R$ 0/mês)</div>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="font-extrabold text-slate-800 text-sm sm:text-base">R$ 104</span>
+                <span class="block text-[11px] text-slate-400">/mês</span>
+              </div>
+            </div>
+          </label>
+
+          <!-- Item 2 -->
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="calc-checkbox sr-only" data-price="85" checked onchange="calculateSavings()">
+            <div class="calc-label p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-slate-50/50 hover:border-indigo-300 transition-all flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="check-circle w-6 h-6 rounded-lg border-2 border-slate-300 flex items-center justify-center text-xs transition-colors shrink-0">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 text-sm sm:text-base">Editor de PDF Pro (Acrobat / Smallpdf)</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Substituído por <span class="font-bold text-purple-600">PDF24 Tools</span> (R$ 0/mês)</div>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="font-extrabold text-slate-800 text-sm sm:text-base">R$ 85</span>
+                <span class="block text-[11px] text-slate-400">/mês</span>
+              </div>
+            </div>
+          </label>
+
+          <!-- Item 3 -->
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="calc-checkbox sr-only" data-price="250" onchange="calculateSavings()">
+            <div class="calc-label p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-slate-50/50 hover:border-indigo-300 transition-all flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="check-circle w-6 h-6 rounded-lg border-2 border-slate-300 flex items-center justify-center text-xs transition-colors shrink-0">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 text-sm sm:text-base">Espionagem de Concorrentes & Fornecedores</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Substituído por <span class="font-bold text-blue-600">ImportYeti + BuiltWith</span> (R$ 0/mês)</div>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="font-extrabold text-slate-800 text-sm sm:text-base">R$ 250</span>
+                <span class="block text-[11px] text-slate-400">/mês</span>
+              </div>
+            </div>
+          </label>
+
+          <!-- Item 4 -->
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="calc-checkbox sr-only" data-price="35" checked onchange="calculateSavings()">
+            <div class="calc-label p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-slate-50/50 hover:border-indigo-300 transition-all flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="check-circle w-6 h-6 rounded-lg border-2 border-slate-300 flex items-center justify-center text-xs transition-colors shrink-0">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 text-sm sm:text-base">Nuvem / Envio de Arquivos Pesados</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Substituído por <span class="font-bold text-purple-600">LocalSend</span> (R$ 0/mês)</div>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="font-extrabold text-slate-800 text-sm sm:text-base">R$ 35</span>
+                <span class="block text-[11px] text-slate-400">/mês</span>
+              </div>
+            </div>
+          </label>
+
+          <!-- Item 5 -->
+          <label class="block cursor-pointer">
+            <input type="checkbox" class="calc-checkbox sr-only" data-price="45" onchange="calculateSavings()">
+            <div class="calc-label p-4 sm:p-5 rounded-2xl border-2 border-slate-200 bg-slate-50/50 hover:border-indigo-300 transition-all flex items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="check-circle w-6 h-6 rounded-lg border-2 border-slate-300 flex items-center justify-center text-xs transition-colors shrink-0">
+                  <i class="fa-solid fa-check"></i>
+                </div>
+                <div>
+                  <div class="font-bold text-slate-900 text-sm sm:text-base">Monitoramento de Vazamentos & Privacidade</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Substituído por <span class="font-bold text-emerald-600">Have I Been Pwned + ToS;DR</span> (R$ 0/mês)</div>
+                </div>
+              </div>
+              <div class="text-right shrink-0">
+                <span class="font-extrabold text-slate-800 text-sm sm:text-base">R$ 45</span>
+                <span class="block text-[11px] text-slate-400">/mês</span>
+              </div>
+            </div>
+          </label>
+
+        </div>
+
+        <!-- Painel de Resultado da Economia -->
+        <div class="lg:col-span-5 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 rounded-3xl p-6 sm:p-8 text-white shadow-xl shadow-indigo-500/20 sticky top-24">
+          <div class="flex items-center justify-between mb-6">
+            <span class="bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full">
+              Resultado Estimado
+            </span>
+            <i class="fa-solid fa-sack-dollar text-2xl text-emerald-300"></i>
+          </div>
+
+          <div class="space-y-6">
+            <div>
+              <p class="text-indigo-100 text-xs sm:text-sm font-medium">Economia Mensal Livre</p>
+              <div id="monthlySavings" class="text-3xl sm:text-4xl font-black tracking-tight mt-1">
+                R$ 224,00
+              </div>
+            </div>
+
+            <div class="pt-5 border-t border-white/15">
+              <p class="text-emerald-200 text-xs sm:text-sm font-bold uppercase tracking-wider">Economia Total em 1 Ano</p>
+              <div id="yearlySavings" class="text-4xl sm:text-5xl font-black text-emerald-300 tracking-tight mt-1">
+                R$ 2.688,00
+              </div>
+              <p id="selectedCountText" class="text-xs text-indigo-100 mt-3">
+                3 assinaturas substituídas por ferramentas 100% gratuitas.
+              </p>
+            </div>
+
+            <div class="bg-white/10 rounded-2xl p-4 text-xs text-indigo-50 leading-relaxed">
+              <i class="fa-solid fa-lightbulb text-amber-300 mr-1.5"></i>
+              <strong>Dica:</strong> Use o <span class="underline font-semibold">AlternativeTo</span> sempre que pensar em assinar um software novo — há grande chance de existir uma versão gratuita ou open source equivalente.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. RODAPÉ LIMPO -->
+  <footer class="bg-slate-50 border-t border-slate-200 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-purple-600 flex items-center justify-center text-white text-sm">
+          <i class="fa-solid fa-layer-group"></i>
+        </div>
+        <div>
+          <p class="font-bold text-slate-900 text-sm">Sites Gratuito</p>
+          <p class="text-xs text-slate-500">Halex <strong class="text-slate-700">System&reg</strong></p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <!--<a href="https://youtu.be/VSIrpA2efAc" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-rose-600 hover:text-rose-700 flex items-center gap-1.5 bg-rose-50 px-3.5 py-2 rounded-xl border border-rose-200/70 transition-colors">
+          <i class="fa-brands fa-youtube text-sm"></i> Ver Vídeo Original
+        </a>-->
+        <a href="#topo" class="text-xs font-bold text-slate-600 hover:text-blue-600 flex items-center gap-1 bg-white px-3.5 py-2 rounded-xl border border-slate-200 transition-colors">
+          <i class="fa-solid fa-arrow-up"></i> Topo
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL DE DETALHES / DICA PRÁTICA -->
+  <div id="detailModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm transition-opacity" onclick="closeModalOnBackdrop(event)">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative transform transition-all" onclick="event.stopPropagation()">
+      
+      <button onclick="closeModal()" aria-label="Fechar detalhes" class="absolute top-5 right-5 w-9 h-9 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition-colors">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div id="modalBadge" class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full mb-3">
+        <!-- Preenchido via JS -->
+      </div>
+
+      <div class="flex items-center gap-3 mb-2">
+        <span id="modalNumber" class="text-2xl font-black text-slate-300">#01</span>
+        <h3 id="modalTitle" class="text-2xl font-black text-slate-900">Nome do Site</h3>
+      </div>
+
+      <div class="flex items-center gap-2 mb-5">
+        <a id="modalUrlLink" href="#" target="_blank" rel="noopener noreferrer" class="text-sm font-mono font-bold text-blue-600 hover:underline flex items-center gap-1.5">
+          <span id="modalUrlText">site.com</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+        </a>
+        <button id="modalCopyBtn" onclick="" class="text-xs bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold px-2.5 py-1 rounded-lg transition-colors">
+          <i class="fa-regular fa-copy mr-1"></i>Copiar
+        </button>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100">
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-1.5">O que faz na prática</h4>
+          <p id="modalDesc" class="text-sm text-slate-700 leading-relaxed"></p>
+        </div>
+
+        <div class="bg-amber-50/80 p-4 rounded-2xl border border-amber-200/80">
+          <h4 class="text-xs font-extrabold uppercase tracking-wider text-amber-700 mb-1.5 flex items-center gap-1.5">
+            <i class="fa-solid fa-lightbulb"></i> Dica Prática
+          </h4>
+          <p id="modalTip" class="text-sm text-slate-800 leading-relaxed"></p>
+        </div>
+      </div>
+
+      <div class="mt-6 flex gap-3">
+        <a id="modalVisitBtn" href="#" target="_blank" rel="noopener noreferrer" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-xl text-sm text-center shadow-md shadow-blue-600/20 transition-all">
+          Acessar Ferramenta Agora <i class="fa-solid fa-external-link-alt ml-1.5 text-xs"></i>
+        </a>
+        <button onclick="closeModal()" class="px-5 py-3 rounded-xl border border-slate-200 hover:bg-slate-100 text-slate-700 font-bold text-sm transition-colors">
+          Fechar
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="fixed bottom-5 right-5 z-50 bg-slate-900 text-white px-4 py-3 rounded-2xl shadow-xl flex items-center gap-2.5 text-xs sm:text-sm font-semibold translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
+      <i class="fa-solid fa-check text-xs"></i>
+    </div>
+    <span id="toastText">Link copiado!</span>
+  </div>
+
+  <!-- JAVASCRIPT INTERATIVO -->
+  <script>
+    // Dados completos dos 10 sites do vídeo
+    const sitesData = [
+      {
+        id: 1,
+        name: "ImportYeti",
+        domain: "importyeti.com",
+        url: "https://www.importyeti.com",
+        category: "mercado",
+        categoryLabel: "Mercado & Concorrência",
+        icon: "fa-ship",
+        highlight: "70 milhões de registros marítimos públicos",
+        summary: "Reúne 70 milhões de registros públicos de embarques marítimos dos EUA; revela quais fábricas produzem para marcas famosas, datas de envio e outros clientes do fornecedor.",
+        tip: "Pesquise o nome de uma grande marca concorrente em inglês para descobrir exatamente de qual fábrica na Ásia ela importa, o volume de contêineres e quais outras empresas compram do mesmo fabricante."
+      },
+      {
+        id: 2,
+        name: "Photopea",
+        domain: "photopea.com",
+        url: "https://www.photopea.com",
+        category: "producao",
+        categoryLabel: "Produção Sem Mensalidade",
+        icon: "fa-wand-magic-sparkles",
+        highlight: "Abre PSD com camadas direto no navegador",
+        summary: "Editor gráfico completo no navegador que abre mais de 40 formatos (incluindo PSD com camadas e máscaras), processa localmente sem enviar arquivos para servidores externos e exporta sem marca d'água.",
+        tip: "Como todo o processamento roda na memória do seu próprio computador, seus arquivos confidenciais nunca sobem para a nuvem e você pode continuar editando mesmo se a internet cair."
+      },
+      {
+        id: 3,
+        name: "PDF24 Tools",
+        domain: "tools.pdf24.org",
+        url: "https://tools.pdf24.org",
+        category: "producao",
+        categoryLabel: "Produção Sem Mensalidade",
+        icon: "fa-file-pdf",
+        highlight: "+30 ferramentas gratuitas e sem limite diário",
+        summary: "Mais de 30 ferramentas gratuitas e sem limite diário para juntar, dividir, comprimir, assinar e aplicar OCR em PDFs, além da versão desktop PDF24 Creator 100% offline.",
+        tip: "Ao contrário de outros sites que travam após 2 arquivos por dia, o PDF24 não tem limites. Se lidar com documentos sigilosos, baixe o 'PDF24 Creator' no Windows para usar tudo offline."
+      },
+      {
+        id: 4,
+        name: "AlternativeTo",
+        domain: "alternativeto.net",
+        url: "https://alternativeto.net",
+        category: "producao",
+        categoryLabel: "Produção Sem Mensalidade",
+        icon: "fa-shuffle",
+        highlight: "+160 mil softwares catalogados pela comunidade",
+        summary: "Catálogo com mais de 160 mil aplicativos para encontrar substitutos gratuitos ou open source para programas pagos, com filtros por sistema operacional e votos da comunidade.",
+        tip: "Digite o nome de qualquer software caro (ex: Premiere, Notion, AutoCAD) e marque os filtros 'Free' e 'Open Source' para achar as melhores alternativas recomendadas por usuários reais."
+      },
+      {
+        id: 5,
+        name: "BuiltWith",
+        domain: "builtwith.com",
+        url: "https://builtwith.com",
+        category: "mercado",
+        categoryLabel: "Mercado & Concorrência",
+        icon: "fa-code",
+        highlight: "Raio-X técnico completo de qualquer site",
+        summary: "Raio-X técnico de qualquer site, revelando plataforma de e-commerce, meios de pagamento, automação de e-mail, servidores e pixels de anúncios ativos.",
+        tip: "Cole o link de uma loja virtual de sucesso para descobrir qual checkout ela usa, quais ferramentas de e-mail marketing estão instaladas e se está rodando anúncios no Meta ou Google."
+      },
+      {
+        id: 6,
+        name: "Wayback Machine",
+        domain: "web.archive.org",
+        url: "https://web.archive.org",
+        category: "mercado",
+        categoryLabel: "Mercado & Concorrência",
+        icon: "fa-clock-rotate-left",
+        highlight: "Arquivo histórico da internet desde 1996",
+        summary: "Máquina do tempo da web da Internet Archive desde 1996, permitindo acessar versões antigas de sites, analisar histórico de preços/ofertas e arquivar páginas como prova.",
+        tip: "Use o recurso 'Save Page Now' para registrar uma página promocional ou regulamento antes que seja alterado, criando um link público com data e hora como prova."
+      },
+      {
+        id: 7,
+        name: "ToS;DR",
+        domain: "tosdr.org",
+        url: "https://tosdr.org",
+        category: "privacidade",
+        categoryLabel: "Blindagem & Privacidade",
+        icon: "fa-scale-balanced",
+        highlight: "Notas de A a E para termos de uso longos",
+        summary: "\"Terms of Service; Didn't Read\" — resume termos de uso longos atribuindo notas de A a E e alertas visuais (verde, amarelo, vermelho) sobre venda de dados ou treino de IA.",
+        tip: "Antes de criar conta em um aplicativo novo ou subir arquivos pessoais, consulte a nota dele no ToS;DR para saber se o serviço reivindica direitos sobre o seu conteúdo."
+      },
+      {
+        id: 8,
+        name: "Just Delete Me",
+        domain: "justdeleteme.xyz",
+        url: "https://justdeleteme.xyz",
+        category: "privacidade",
+        categoryLabel: "Blindagem & Privacidade",
+        icon: "fa-user-xmark",
+        highlight: "Links diretos para páginas ocultas de exclusão",
+        summary: "Catálogo com links diretos para páginas ocultas de exclusão de contas, classificando a dificuldade por cores e mostrando instruções/e-mails para cancelamento.",
+        tip: "Quando um site esconde o botão de encerrar conta em dezenas de menus, busque o serviço no Just Delete Me: cartões verdes levam direto à tela de exclusão; pretos indicam serviços impossíveis de apagar."
+      },
+      {
+        id: 9,
+        name: "Have I Been Pwned",
+        domain: "haveibeenpwned.com",
+        url: "https://haveibeenpwned.com",
+        category: "privacidade",
+        categoryLabel: "Blindagem & Privacidade",
+        icon: "fa-shield-virus",
+        highlight: "Verificação de vazamentos em bilhões de registros",
+        summary: "Ferramenta de segurança de Troy Hunt que verifica em dezenas de bilhões de registros se um e-mail já sofreu vazamento de dados e oferece alertas gratuitos (Notify Me).",
+        tip: "Teste seus e-mails principais e ative a função gratuita 'Notify Me'. Se algum site onde você tem cadastro sofrer invasão no futuro, você receberá um aviso imediato para trocar a senha."
+      },
+      {
+        id: 10,
+        name: "LocalSend",
+        domain: "localsend.org",
+        url: "https://localsend.org",
+        category: "producao",
+        categoryLabel: "Produção Sem Mensalidade",
+        icon: "fa-wifi",
+        highlight: "AirDrop universal multiplataforma sem internet",
+        summary: "\"AirDrop universal\" gratuito e open source para transferir fotos, vídeos e pastas em qualidade 100% original via Wi-Fi local entre Windows, Mac, Linux, Android e iPhone sem cabos ou nuvem.",
+        tip: "Instale o app nos seus dispositivos conectados ao mesmo roteador Wi-Fi. Você envia vídeos pesados do iPhone para o PC Windows ou Android em segundos, sem perder qualidade como acontece no WhatsApp."
+      }
+    ];
+
+    let activeCategory = 'all';
+
+    // Estilos visuais por categoria
+    const categoryStyles = {
+      mercado: {
+        badgeBg: 'bg-blue-100 text-blue-700 border-blue-200',
+        iconBg: 'bg-blue-50 text-blue-600',
+        borderHover: 'hover:border-blue-300',
+        highlightText: 'text-blue-700 bg-blue-50/80'
+      },
+      producao: {
+        badgeBg: 'bg-purple-100 text-purple-700 border-purple-200',
+        iconBg: 'bg-purple-50 text-purple-600',
+        borderHover: 'hover:border-purple-300',
+        highlightText: 'text-purple-700 bg-purple-50/80'
+      },
+      privacidade: {
+        badgeBg: 'bg-emerald-100 text-emerald-700 border-emerald-200',
+        iconBg: 'bg-emerald-50 text-emerald-600',
+        borderHover: 'hover:border-emerald-300',
+        highlightText: 'text-emerald-700 bg-emerald-50/80'
+      }
+    };
+
+    // Renderiza os cards na grade
+    function renderSites(list) {
+      const grid = document.getElementById('sitesGrid');
+      const emptyState = document.getElementById('emptyState');
+      grid.innerHTML = '';
+
+      if (list.length === 0) {
+        grid.classList.add('hidden');
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      grid.classList.remove('hidden');
+      emptyState.classList.add('hidden');
+
+      list.forEach(site => {
+        const style = categoryStyles[site.category];
+        const numFormatted = String(site.id).padStart(2, '0');
+
+        const card = document.createElement('article');
+        card.className = `bg-white rounded-3xl p-6 border border-slate-200/90 ${style.borderHover} card-hover flex flex-col justify-between shadow-sm`;
+        
+        card.innerHTML = `
+          <div>
+            <!-- Topo do Card: Número + Badge Categoria -->
+            <div class="flex items-center justify-between gap-2 mb-4">
+              <span class="inline-flex items-center justify-center w-8 h-8 rounded-xl ${style.iconBg} font-black text-xs">
+                #${numFormatted}
+              </span>
+              <span class="text-[11px] font-bold px-2.5 py-1 rounded-full border ${style.badgeBg}">
+                ${site.categoryLabel}
+              </span>
+            </div>
+
+            <!-- Nome e Ícone -->
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-10 h-10 rounded-2xl ${style.iconBg} flex items-center justify-center text-base shrink-0">
+                <i class="fa-solid ${site.icon}"></i>
+              </div>
+              <div>
+                <h3 class="font-extrabold text-lg text-slate-900 leading-tight">${site.name}</h3>
+                <div class="flex items-center gap-1.5 mt-0.5">
+                  <a href="${site.url}" target="_blank" rel="noopener noreferrer" class="text-xs font-mono font-semibold text-slate-500 hover:text-blue-600 transition-colors">
+                    ${site.domain}
+                  </a>
+                  <button onclick="copyText('${site.domain}', 'URL ${site.domain} copiada!')" title="Copiar endereço" class="text-slate-400 hover:text-blue-600 p-1 rounded transition-colors">
+                    <i class="fa-regular fa-copy text-xs"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Destaque Principal -->
+            <div class="mt-3 mb-3 px-3 py-1.5 rounded-xl text-xs font-bold ${style.highlightText} flex items-center gap-2">
+              <i class="fa-solid fa-star text-[10px]"></i>
+              <span>${site.highlight}</span>
+            </div>
+
+            <!-- Resumo -->
+            <p class="text-sm text-slate-600 leading-relaxed">
+              ${site.summary}
+            </p>
+          </div>
+
+          <!-- Rodapé do Card: Ações -->
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center gap-2">
+            <button onclick="openModal(${site.id})" class="flex-1 bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-bold py-2.5 px-3 rounded-xl text-xs transition-colors flex items-center justify-center gap-1.5">
+              <i class="fa-solid fa-lightbulb text-amber-500"></i>
+              Ver Detalhes / Dica
+            </button>
+            <a href="${site.url}" target="_blank" rel="noopener noreferrer" title="Visitar ${site.name}" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 px-3.5 rounded-xl text-xs transition-colors flex items-center justify-center">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        `;
+
+        grid.appendChild(card);
+      });
+    }
+
+    // Filtra por busca + categoria
+    function filterSites() {
+      const searchInput = document.getElementById('searchInput');
+      const query = searchInput.value.trim().toLowerCase();
+      const clearBtn = document.getElementById('clearSearchBtn');
+
+      if (query.length > 0) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+
+      const filtered = sitesData.filter(site => {
+        const matchesCategory = activeCategory === 'all' || site.category === activeCategory;
+        const matchesQuery = 
+          site.name.toLowerCase().includes(query) ||
+          site.domain.toLowerCase().includes(query) ||
+          site.summary.toLowerCase().includes(query) ||
+          site.highlight.toLowerCase().includes(query) ||
+          site.categoryLabel.toLowerCase().includes(query);
+
+        return matchesCategory && matchesQuery;
+      });
+
+      renderSites(filtered);
+    }
+
+    // Altera o botão ativo de categoria
+    function setCategoryFilter(category) {
+      activeCategory = category;
+
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const btnCat = btn.getAttribute('data-cat');
+        // Reseta classes
+        btn.className = 'filter-btn px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all border ';
+        
+        if (btnCat === category) {
+          if (category === 'all') btn.className += 'bg-slate-900 text-white border-slate-900 shadow-sm';
+          if (category === 'mercado') btn.className += 'bg-blue-600 text-white border-blue-600 shadow-sm';
+          if (category === 'producao') btn.className += 'bg-purple-600 text-white border-purple-600 shadow-sm';
+          if (category === 'privacidade') btn.className += 'bg-emerald-600 text-white border-emerald-600 shadow-sm';
+        } else {
+          if (btnCat === 'all') btn.className += 'bg-slate-100 text-slate-700 hover:bg-slate-200 border-slate-200';
+          if (btnCat === 'mercado') btn.className += 'bg-blue-50 text-blue-700 hover:bg-blue-100 border-blue-200/70';
+          if (btnCat === 'producao') btn.className += 'bg-purple-50 text-purple-700 hover:bg-purple-100 border-purple-200/70';
+          if (btnCat === 'privacidade') btn.className += 'bg-emerald-50 text-emerald-700 hover:bg-emerald-100 border-emerald-200/70';
+        }
+      });
+
+      filterSites();
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      filterSites();
+    }
+
+    function resetFilters() {
+      document.getElementById('searchInput').value = '';
+      setCategoryFilter('all');
+    }
+
+    // Modal de Detalhes
+    function openModal(siteId) {
+      const site = sitesData.find(s => s.id === siteId);
+      if (!site) return;
+
+      const style = categoryStyles[site.category];
+      const modal = document.getElementById('detailModal');
+      
+      const badge = document.getElementById('modalBadge');
+      badge.className = `inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full border mb-3 ${style.badgeBg}`;
+      badge.innerHTML = `<i class="fa-solid ${site.icon}"></i> ${site.categoryLabel}`;
+
+      document.getElementById('modalNumber').innerText = `#${String(site.id).padStart(2, '0')}`;
+      document.getElementById('modalTitle').innerText = site.name;
+      
+      const urlLink = document.getElementById('modalUrlLink');
+      urlLink.href = site.url;
+      document.getElementById('modalUrlText').innerText = site.domain;
+
+      const copyBtn = document.getElementById('modalCopyBtn');
+      copyBtn.onclick = () => copyText(site.url, `Link de ${site.name} copiado!`);
+
+      document.getElementById('modalDesc').innerText = site.summary;
+      document.getElementById('modalTip').innerText = site.tip;
+      document.getElementById('modalVisitBtn').href = site.url;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('detailModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    function closeModalOnBackdrop(event) {
+      if (event.target.id === 'detailModal') {
+        closeModal();
+      }
+    }
+
+    // Fechar modal com ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    // Copiar texto para a área de transferência (compatível com iframes)
+    function copyText(text, toastMessage) {
+      const tempInput = document.createElement('textarea');
+      tempInput.value = text;
+      tempInput.style.position = 'fixed';
+      tempInput.style.opacity = '0';
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      try {
+        document.execCommand('copy');
+        showToast(toastMessage);
+      } catch (err) {
+        showToast('Não foi possível copiar automaticamente.');
+      }
+      document.body.removeChild(tempInput);
+    }
+
+    // Copiar lista completa organizada nas 3 pastas
+    function copyAllFolders() {
+      const organizedText = `📁 PASTA 1: MERCADO E CONCORRÊNCIA
+1. ImportYeti - https://www.importyeti.com
+5. BuiltWith - https://builtwith.com
+6. Wayback Machine - https://web.archive.org
+
+📁 PASTA 2: PRODUÇÃO SEM MENSALIDADE
+2. Photopea - https://www.photopea.com
+3. PDF24 Tools - https://tools.pdf24.org
+4. AlternativeTo - https://alternativeto.net
+10. LocalSend - https://localsend.org
+
+📁 PASTA 3: BLINDAGEM E PRIVACIDADE
+7. ToS;DR - https://tosdr.org
+8. Just Delete Me - https://justdeleteme.xyz
+9. Have I Been Pwned - https://haveibeenpwned.com
+
+Fonte: Canal Dossiê Financeiro (https://youtu.be/VSIrpA2efAc)`;
+
+      copyText(organizedText, 'Lista das 3 pastas copiada!');
+    }
+
+    // Exibe notificação Toast
+    let toastTimeout;
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toastText').innerText = message;
+      
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      clearTimeout(toastTimeout);
+      
+      toastTimeout = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 2800);
+    }
+
+    // Calculadora de Economia
+    function calculateSavings() {
+      const checkboxes = document.querySelectorAll('.calc-checkbox');
+      let monthlyTotal = 0;
+      let count = 0;
+
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          monthlyTotal += parseFloat(cb.getAttribute('data-price')) || 0;
+          count++;
+        }
+      });
+
+      const yearlyTotal = monthlyTotal * 12;
+
+      document.getElementById('monthlySavings').innerText = monthlyTotal.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+      });
+
+      document.getElementById('yearlySavings').innerText = yearlyTotal.toLocaleString('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+      });
+
+      const countText = count === 1 
+        ? '1 assinatura substituída por ferramenta 100% gratuita.' 
+        : `${count} assinaturas substituídas por ferramentas 100% gratuitas.`;
+      document.getElementById('selectedCountText').innerText = countText;
+    }
+
+    // Menu Mobile
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Inicialização
+    window.addEventListener('DOMContentLoaded', () => {
+      renderSites(sitesData);
+      calculateSavings();
+    });
+  </script>
+</body>
+</html>
